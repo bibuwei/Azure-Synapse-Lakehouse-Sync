@@ -43,7 +43,7 @@ param synapseAzureADAdminObjectId string
 
 // Add a random suffix to ensure global uniqueness among the resources created
 //   Bicep: https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-string#uniquestring
-var resourceSuffix = substring(uniqueString(subscription().subscriptionId, deployment().name), 0, 3)
+var resourceSuffix = substring(uniqueString(subscription().subscriptionId, deployment().name), 0, 4)
 
 // Create the Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-01-01' = {
